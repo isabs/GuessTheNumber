@@ -40,9 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompareStrategies\CompareAll.cs" />
+    <Compile Include="CompareStrategies\CompareDigits.cs" />
+    <Compile Include="Enums\CompareResult.cs" />
+    <Compile Include="Enums\CompareStrategyType.cs" />
+    <Compile Include="Exceptions\UnhandledResultType.cs" />
     <Compile Include="Exceptions\WrongLengthException.cs" />
-    <Compile Include="Interfaces\ICompareStrategy.cs" />
-    <Compile Include="NumberStrategy\Number.cs" />
+    <Compile Include="CompareStrategies\CompareStrategy.cs" />
+    <Compile Include="Number.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
