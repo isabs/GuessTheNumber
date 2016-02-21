@@ -3,7 +3,7 @@ using GuessTheNumber.Exceptions;
 
 namespace GuessTheNumber.CompareStrategies
 {
-    class CompareAll : CompareStrategy
+    public class CompareAll : CompareStrategy
     {
         public override string CompareNumbers(int[] correctNumber, int[] number)
         {

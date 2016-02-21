@@ -32,7 +32,7 @@ namespace GuessTheNumber
 
         public string Compare (int[] number)
         {
-            throw new NotImplementedException();
+            return _comparer.CompareNumbers(Value, number);
         }
     }
 }

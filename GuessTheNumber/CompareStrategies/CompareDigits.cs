@@ -1,10 +1,8 @@
-﻿using System;
-using GuessTheNumber.Enums;
-using GuessTheNumber.Exceptions;
+﻿using GuessTheNumber.Exceptions;
 
 namespace GuessTheNumber.CompareStrategies
 {
-    class CompareDigits : CompareStrategy
+    public class CompareDigits : CompareStrategy
     {
         public override string CompareNumbers(int[] correctNumber, int[] number)
         {
