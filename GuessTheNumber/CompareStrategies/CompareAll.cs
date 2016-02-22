@@ -1,5 +1,4 @@
-﻿using GuessTheNumber.Enums;
-using GuessTheNumber.Exceptions;
+﻿using GuessTheNumber.Exceptions;
 
 namespace GuessTheNumber.CompareStrategies
 {

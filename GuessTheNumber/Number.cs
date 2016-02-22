@@ -34,5 +34,12 @@ namespace GuessTheNumber
         {
             return _comparer.CompareNumbers(Value, number);
         }
+
+        public int GetSumOfDigits()
+        {
+            var sum = 0;
+            Array.ForEach(Value, digit => sum += digit);
+            return sum;
+        }
     }
 }
