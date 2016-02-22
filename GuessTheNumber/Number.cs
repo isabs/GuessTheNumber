@@ -38,7 +38,9 @@ namespace GuessTheNumber
         public int GetSumOfDigits()
         {
             var sum = 0;
+
             Array.ForEach(Value, digit => sum += digit);
+
             return sum;
         }
     }
