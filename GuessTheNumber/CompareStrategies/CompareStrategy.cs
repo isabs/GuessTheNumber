@@ -1,11 +1,26 @@
-﻿using GuessTheNumber.Enums;
+﻿using System.Linq;
+using GuessTheNumber.Enums;
 using GuessTheNumber.Exceptions;
 
 namespace GuessTheNumber.CompareStrategies
 {
     public abstract class CompareStrategy
     {
-        public abstract string CompareNumbers(int[] correctNumber, int[] number);
+        public string Name { get; set; }
+
+        protected CompareStrategy(string name)
+        {
+            Name = name;
+        }
+
+        public abstract string CompareNumbersTextResult(int[] correctNumber, int[] number);
+
+        public bool CompareNumbers(int[] correctNumber, int[] number)
+        {
+            if (correctNumber.Length != number.Length) throw new WrongLengthException();
+
+            return !correctNumber.Where((t, digit) => Compare(t, number[digit]) != CompareResult.Equal).Any();
+        }
 
         protected CompareResult Compare(int correctDigit, int otherDigit)
         {

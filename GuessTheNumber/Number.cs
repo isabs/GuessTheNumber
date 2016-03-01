@@ -9,13 +9,13 @@ namespace GuessTheNumber
 
         public int[] Value { get; set; }
         
-        protected Number(int length, CompareStrategy comparer)
+        public Number(int length, CompareStrategy comparer)
         {
             Value = new int[length];
             _comparer = comparer;
         }
 
-        public void Start(CompareStrategy comparer)
+        public void Start()
         {
             GenerateNumber();
         }
@@ -30,7 +30,12 @@ namespace GuessTheNumber
             }
         }
 
-        public string Compare (int[] number)
+        public string CompareText (int[] number)
+        {
+            return _comparer.CompareNumbersTextResult(Value, number);
+        }
+
+        public bool Compare(int[] number)
         {
             return _comparer.CompareNumbers(Value, number);
         }

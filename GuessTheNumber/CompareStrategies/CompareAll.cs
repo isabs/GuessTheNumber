@@ -4,7 +4,11 @@ namespace GuessTheNumber.CompareStrategies
 {
     public class CompareAll : CompareStrategy
     {
-        public override string CompareNumbers(int[] correctNumber, int[] number)
+        public CompareAll() : base("Compare whole number")
+        {
+        }
+
+        public override string CompareNumbersTextResult(int[] correctNumber, int[] number)
         {
             if (correctNumber.Length != number.Length) throw new WrongLengthException();
 

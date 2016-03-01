@@ -1,10 +1,16 @@
-﻿using GuessTheNumber.Exceptions;
+﻿using System.Linq;
+using GuessTheNumber.Enums;
+using GuessTheNumber.Exceptions;
 
 namespace GuessTheNumber.CompareStrategies
 {
     public class CompareDigits : CompareStrategy
     {
-        public override string CompareNumbers(int[] correctNumber, int[] number)
+        public CompareDigits() : base("Compare digits")
+        {
+        }
+
+        public override string CompareNumbersTextResult(int[] correctNumber, int[] number)
         {
             if(correctNumber.Length != number.Length) throw new WrongLengthException();
 
